@@ -1,0 +1,30 @@
+﻿@model EmployeManagementMvc.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Registration</h2>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </p>
+    <p>
+        <input type="submit" value="Submit"/>
+        
+    </p>
+    @Html.ViewData["Message"]
+}
+
